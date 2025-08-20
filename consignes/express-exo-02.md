@@ -26,5 +26,11 @@ Sur base de l'exercice précédent
       _Exemple d'url :_ "http://localhost:8080/exo2/mois"  
       _Exemple de la réponse :_ `[ "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]`  
     - Filtre pour les letters :  
-      _Exemple d'url :_ "http://localhost:8080/exo2/mois?query=i"  
+      _Exemple d'url :_ "http://localhost:8080/exo2/mois?q=i"  
       _Exemple de la réponse :_ `['Fevrier', 'Avril', 'Mai', 'Juin', 'Juillet']`
+    - Filtre pour le nombre de jours :  
+      _Exemple d'url :_ "http://localhost:8080/exo2/mois?nb=29"  
+      _Exemple de la réponse :_ `['Fevrier']`
+    - Filtre avec la letter et le nombre de jours :  
+      _Exemple d'url :_ "http://localhost:8080/exo2/mois?nb=30&q=bre"  
+      _Exemple de la réponse :_ `['Septembre', 'Novembre']`
