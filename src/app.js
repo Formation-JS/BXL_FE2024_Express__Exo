@@ -1,4 +1,5 @@
 import express from 'express';
+import timeRouter from './routers/time.router.js';
 
 //? Extraction des données d'environnment
 const { NODE_ENV, PORT } = process.env;
@@ -21,6 +22,9 @@ app.get('/exo1/hello/:name', (req, res) => {
     const firstNameLetter = name[0].toUpperCase();
     res.send(`Bien le bonjour ${firstNameLetter + name.slice(1)}`)
 });
+
+//? Ajout des routers
+app.use('/exo2', timeRouter);
 
 //? Démarrage du serveur
 app.listen(PORT, (error) => {
